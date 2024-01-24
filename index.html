@@ -7,30 +7,10 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
   <title>Kaaikani</title>
 
-  <style>
-    .swiper-container {
-      width: 100%;
-      height: 100%;
-    }
-
-    .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: transparent;
-      /* Center slide text vertically */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .swiper-pagination-bullet {
-      background: #007BFF;
-    }
-  </style>
+ 
 </head>
 
 <body>
@@ -284,33 +264,24 @@
       </div>
       <h2 class="mt-4 text-gray-900"></h2>
   
-      <div class="swiper-container">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="md:min-h-[20rem] mx-5">
-              <img
-                class="object-cover w-full h-44 sm:h-72 md:h-80 lg:h-96px rounded-lg"
-                src="/Images/Recent/about-bg1.png"
-                
-                alt=""
-              />
-    
-              </div>
+      <div class=" space-y-5 items-center sm:space-y-0 sm:flex">
+        <div class="md:min-h-[20rem] mx-5">
+          <img
+            class="object-cover w-full h-44 sm:h-72 md:h-80 lg:h-96px rounded-lg"
+            src="/Images/Recent/about-bg1.png"
+            
+            alt=""
+          />
+
           </div>
-          <div class="swiper-slide">
-            <div class="md:min-h-[20rem] mx-5">
-              <img
-                class="object-cover w-full h-44 sm:h-72 md:h-80 lg:h-96 rounded-lg"
-                src="/Images/Recent/about-bg2.png"
-                alt=""
-              />
-              </div>
-          </div>
-          
-          <!-- Add more slides as needed -->
-        </div>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
+          <div class="md:min-h-[20rem] mx-5">
+            <img
+              class="object-cover w-full h-44 sm:h-72 md:h-80 lg:h-96 rounded-lg"
+              src="/Images/Recent/about-bg2.png"
+              alt=""
+            />
+            </div>
+  
       </div>
   
     </div>
@@ -341,26 +312,7 @@
       e.name === 'menu' ? (e.name = "close", list.classList.add('top-[80px]'), list.classList.add('opacity-100')) : (e.name = "menu", list.classList.remove('top-[80px]'), list.classList.remove('opacity-100'))
     }
 
-    var swiper = new Swiper(".swiper-container", {
-      autoplay: {
-        delay: 3500,
-        disableOnInteraction: false,
-      },
-      slidesPerView: 1,
-      spaceBetween: 10,
-      breakpoints: {
-        640: {
-          slidesPerView: 1,
-          spaceBetween: 0,
-        },
-        
-        
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
+
   </script>
 
 </body>
