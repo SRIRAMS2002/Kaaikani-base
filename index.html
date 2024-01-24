@@ -7,7 +7,30 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <title>Kaaikani</title>
+
+  <style>
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: transparent;
+      /* Center slide text vertically */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-pagination-bullet {
+      background: #007BFF;
+    }
+  </style>
 </head>
 
 <body>
@@ -115,36 +138,193 @@
       </div>
     </div>
 
-     <!-- About Section -->
-  <div id="About" class="py-12 sm:py-20">
-    <div class="container mx-auto px-6 text-gray-600 md:px-12 xl:px-16">
-      <div class="bg-gray-50 shadow-lg dark:lg:bg-darker lg:p-5 rounded-[2.5rem] space-y-6 md:flex md:gap-6 justify-center md:space-y-0 lg:items-center">
-        <div class="md:w-5/12 lg:w-1/2">
-          <img src="/Images/About-us.png" alt="image" loading="lazy" class="w-full h-auto" />
-        </div>
-        <div class="md:w-7/12 mx-3.5 py-3.5 lg:w-1/2">
-          <h2 class="text-3xl font-bold text-gray-900 md:text-4xl">
-            Discover a healthier lifestyle with <span class="text-green-600">Kaaikani</span>
-          </h2>
-          <p class="my-8 text-lg text-gray-800">
-            Your ultimate app for freshness. We take pride in bringing you the finest vegetables, fruits, and fresh
-            juices, all delivered right to your doorstep.
-          </p>
-          <p class="my-8 text-lg text-gray-800">
-            Your go-to app for the finest vegetables, fruits, and fresh juices, delivered to your doorstep. Embrace a
-            healthier way of living where convenience meets nutrition, all at the tap of your fingertips.
-          </p>
+    <!-- About Section -->
+    <div id="About" class="py-12 sm:py-20">
+      <div class="container mx-auto px-6 text-gray-600 md:px-12 xl:px-16">
+        <div
+          class="bg-gray-50 shadow-lg dark:lg:bg-darker lg:p-5 rounded-[2.5rem] space-y-6 md:flex md:gap-6 justify-center md:space-y-0 lg:items-center">
+          <div class="md:w-5/12 lg:w-1/2">
+            <img src="/Images/About-us.png" alt="image" loading="lazy" class="w-full h-auto" />
+          </div>
+          <div class="md:w-7/12 mx-3.5 py-3.5 lg:w-1/2">
+            <h2 class="text-3xl font-bold text-gray-900 md:text-4xl">
+              Discover a healthier lifestyle with <span class="text-green-600">Kaaikani</span>
+            </h2>
+            <p class="my-8 text-lg text-gray-800">
+              Your ultimate app for freshness. We take pride in bringing you the finest vegetables, fruits, and fresh
+              juices, all delivered right to your doorstep.
+            </p>
+            <p class="my-8 text-lg text-gray-800">
+              Your go-to app for the finest vegetables, fruits, and fresh juices, delivered to your doorstep. Embrace a
+              healthier way of living where convenience meets nutrition, all at the tap of your fingertips.
+            </p>
+          </div>
         </div>
       </div>
     </div>
+
+     <!-- Services Section -->
+  
+     <div class="py-0">
+      <div class="xl:container m-auto px-6 text-gray-500 md:px-12">
+        <div>
+          <h2 class="mt-4 text-2xl font-bold text-gray-700 text-center md:text-4xl">
+          Services
+          </h2>
+        </div>
+        <div
+          class="mt-10 grid divide-x divide-y divide-gray-100 dark:divide-gray-700 overflow-hidden rounded-3xl border border-gray-100 dark:border-gray-700 sm:grid-cols-2 lg:grid-cols-4 lg:divide-y-0 xl:grid-cols-4"
+        >
+          <div class="group relative  bg-gradient-to-br from-black to-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
+            <div class="relative space-y-8 py-12 p-8">
+              <img
+                src="/Images/Services/trolley.png"
+                class="w-12"
+                width="512"
+                height="512"
+                alt="burger illustration"
+              />
+    
+              <div class="space-y-2">
+                <h5
+                  class="text-xl font-medium text-gray-700 dark:text-white transition group-hover:text-primary"
+                >
+                Shop Again with Precision
+                </h5>
+                <p class="text-sm text-gray-600 dark:text-gray-300">
+                  Shop a diverse range of handpicked vegetables, juicy fruits, and pre-chopped ingredients, making your cooking experience a breeze!
+                </p>
+              </div>
+             
+            </div>
+          </div>
+          <div class="group relative bg-gradient-to-br from-black to-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
+            <div class="relative space-y-8 py-12 p-8">
+              <img
+                src="/Images/Services/fast-delivery.png"
+                class="w-12"
+                width="512"
+                height="512"
+                alt="burger illustration"
+              />
+    
+              <div class="space-y-2">
+                <h5
+                  class="text-xl font-medium text-gray-700 dark:text-white transition group-hover:text-primary"
+                >
+                Order Fulfillment
+                </h5>
+                <p class="text-sm text-gray-600 dark:text-gray-300">
+                  Enjoy swift and reliable deliveries, making your shopping hassle-free as we promptly bring farm goodness to your kitchen.
+                </p>
+              </div>
+             
+            </div>
+          </div>
+          <div class="group relative  bg-gradient-to-br from-black to-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
+            <div class="relative space-y-8 py-12 p-8">
+              <img
+                src="/Images/Services/login.png"
+                class="w-12"
+                width="512"
+                height="512"
+                alt="burger illustration"
+              />
+    
+              <div class="space-y-2">
+                <h5
+                  class="text-xl font-medium text-gray-700 dark:text-white transition group-hover:text-primary"
+                >
+                Hassle-Free Transactions
+                </h5>
+                <p class="text-sm text-gray-600 dark:text-gray-300">
+                  Shop confidently at Kaaikani! Our secure payment gateways guarantee safe transactions, coupled with a user-friendly interface for a seamless checkout process, ensuring an effortless and enjoyable shopping experience.
+                </p>
+              </div>
+            
+            </div>
+          </div>
+          <div
+            class="group relative bg-gradient-to-br from-black to-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10"
+          >
+            <div
+              class="relative space-y-8 py-12 p-8 transition duration-300 group-hover:bg-white dark:group-hover:bg-gray-800"
+            >
+              <img
+                src="/Images/Services/sustainability.png"
+                class="w-12"
+                width="512"
+                height="512"
+                alt="burger illustration"
+              />
+    
+              <div class="space-y-2">
+                <h5
+                  class="text-xl font-medium text-gray-700 dark:text-white transition group-hover:text-primary"
+                >
+                Eco-friendly initiatives
+                </h5>
+                <p class="text-sm text-gray-600 dark:text-gray-300">
+                  Satisfy your cravings with Kaaikani's refreshing and nutritious juices, offering a blend of classic and exotic flavors while championing sustainability through eco-friendly packaging and support for local farmers.
+                </p>
+              </div>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recents -->
+    <div class="py-10">
+      <div class="mt-10 flex items-center overflow-hidden mx-5 gap-x-4">
+        <div class="h-px flex-auto flex bg-gray-700"></div>
+        <h4 class="text-2xl md:text-4xl font-bold text-center leading-6 text-gray-900">Latest Offers</h4>
+        <div class="h-px flex-auto bg-gray-700"></div>
+      </div>
+      <h2 class="mt-4 text-gray-900"></h2>
+  
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="md:min-h-[20rem] mx-5">
+              <img
+                class="object-cover w-full h-44 sm:h-72 md:h-80 lg:h-96px rounded-lg"
+                src="/Images/Recent/about-bg1.png"
+                
+                alt=""
+              />
+    
+              </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="md:min-h-[20rem] mx-5">
+              <img
+                class="object-cover w-full h-44 sm:h-72 md:h-80 lg:h-96 rounded-lg"
+                src="/Images/Recent/about-bg2.png"
+                alt=""
+              />
+              </div>
+          </div>
+          
+          <!-- Add more slides as needed -->
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+  
+    </div>
+  
+    
+                                        
+
+
+
+
+
+
   </div>
 
- 
-
-
-
-
-  </div>
 
 
 
@@ -154,20 +334,35 @@
 
 
 
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+   <script>
+    function Menu(e) {
+      let list = document.querySelector('ul');
+      e.name === 'menu' ? (e.name = "close", list.classList.add('top-[80px]'), list.classList.add('opacity-100')) : (e.name = "menu", list.classList.remove('top-[80px]'), list.classList.remove('opacity-100'))
+    }
 
+    var swiper = new Swiper(".swiper-container", {
+      autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+      },
+      slidesPerView: 1,
+      spaceBetween: 10,
+      breakpoints: {
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 0,
+        },
+        
+        
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
 
-
-
-
-
-
-
-    <script>
-      function Menu(e) {
-        let list = document.querySelector('ul');
-        e.name === 'menu' ? (e.name = "close", list.classList.add('top-[80px]'), list.classList.add('opacity-100')) : (e.name = "menu", list.classList.remove('top-[80px]'), list.classList.remove('opacity-100'))
-      }
-    </script>
 </body>
 
 </html>
