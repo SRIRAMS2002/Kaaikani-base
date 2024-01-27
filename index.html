@@ -16,10 +16,11 @@
 <body>
   <!-- NAVBAR SECTION -->
   <nav
-    class="fixed bg-opacity-75 backdrop-blur-lg  inset-x-0 top-0 z-10 bg-white/30  mt-5 shadow-xl mx-auto max-w-7xl px-4 sm:px-6 lg:px-8  rounded-full shadow md:flex md:items-center md:justify-between">
+    class="fixed bg-opacity-75 backdrop-blur-lg  inset-x-0 top-0 z-10 bg-white/30 mt-2.5 shadow-xl mx-auto max-w-7xl px-4 sm:px-6 lg:px-8  rounded-full shadow md:flex md:items-center md:justify-between">
     <div class="flex justify-between  px-2.5  items-center ">
       <span class="text-2xl font-[Poppins] cursor-pointer">
-        <img class="h-20 w-auto inline" src="/Images/Kaaikani.png">
+        <a href="#"> <img class="h-20 w-auto inline" src="/Images/Kaaikani.png"></a>
+       
 
       </span>
 
@@ -29,17 +30,18 @@
     </div>
 
    <!-- Mobile Version -->
-   <ul class="md:hidden flex flex-col top-0 right-0 items-center justify-center bg-white shadow-xl rounded-lg absolute  w-full mt-2.5 opacity-0 top-[-400px] transition-transform duration-300 transform">
+   <ul id="mobileNav" class="md:hidden flex flex-col top-0 right-0 items-center justify-center bg-white shadow-xl  absolute rounded-xl  opacity-0 top-[-400px] transition-transform duration-300 transform">
+   
     <li class="mx-4 my-2.5">
-      <a href="#About" class="block text-lg hover:text-green-500 font-semibold duration-500">About Us</a>
+      <a  onclick="handleNav(this)" href="#About" class="block text-lg hover:text-green-500 font-semibold duration-500">About Us</a>
     </li>
     <li class="mx-4 my-2.5">
-      <a href="#Service" class="block text-lg hover:text-green-500 font-semibold duration-500">Services</a>
-    </li>
-    <li class="mx-4 my-2.5">
-      <a href="#Contact" class="block text-lg hover:text-green-500 font-semibold duration-500">Contact Us</a>
+      <a onclick="handleNav(this)" href="#Service" class="block text-lg hover:text-green-500 font-semibold duration-500">Services</a>
     </li>
     <li class="mx-4 my-2.5 ">
+      <a onclick="handleNav(this)" href="#Contact" class="block text-lg hover:text-green-500 font-semibold duration-500">Contact Us</a>
+    </li>
+    <li class="mx-4 my-2.5 border-t-2 border-gray-700 pt-5 px-2 ">
       <a href="https://play.google.com/store/apps/details?id=com.kaaikani.kaaikani&pli=1" target="_blank">
         <img class="h-12 w-auto mx-auto" src="/Images/GooglePlayStore.svg" alt="" />
       </a>
@@ -50,7 +52,7 @@
 <!-- Desktop Version -->
 <div class="hidden md:flex md:items-center bg-transparent text-white rounded-3xl ">
   <div class="mx-4 my-6 md:my-0">
-    <a href="#About" class="text-lg hover:text-green-500 font-semibold duration-500">About Us</a>
+    <a   href="#About" class="text-lg hover:text-green-500 font-semibold duration-500">About Us</a>
   </div>
   <div class="mx-4 my-6 md:my-0">
     <a href="#Service" class="text-lg hover:text-green-500 font-semibold duration-500">Services</a>
@@ -406,11 +408,21 @@
 
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
    <script>
-    function Menu(e) {
-      let list = document.querySelector('ul');
+   function Menu(e) {
+      let list = document.getElementById('mobileNav');
       e.name === 'menu' ? (e.name = "close", list.classList.add('top-[80px]'), list.classList.add('opacity-100')) : (e.name = "menu", list.classList.remove('top-[80px]'), list.classList.remove('opacity-100'))
     }
 
+    function handleNav(e) {
+      let list = document.getElementById('mobileNav');
+      list.classList.remove('top-[80px]');
+      list.classList.remove('opacity-100');
+      let menuIcon = document.querySelector('.cursor-pointer ion-icon');
+      menuIcon.name = 'menu'; 
+
+  
+      // Add any other logic you need for handling the navigation item click
+    }
 
   </script>
 
